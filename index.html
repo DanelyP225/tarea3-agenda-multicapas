@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 - Agenda Multicapas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="encabezado-tarea">
+        <h1>Tarea 3 - Danely Pamela</h1>
+        <p class="subtitulo">Agenda de Contactos Multicapas</p>
+    </header>
+
+    <main class="contenedor-principal">
+
+        <section class="tarjeta seccion-formulario">
+            <h2>Agregar Contacto</h2>
+            <form id="formulario-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan" required>
+                </div>
+
+                <div class="campo">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" placeholder="Ej. Pérez" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" placeholder="Ej. 809-555-0101" required>
+                </div>
+
+                <button type="submit" id="btn-guardar" class="btn">Guardar Contacto</button>
+            </form>
+            <div id="mensaje-estado" class="mensaje-estado"></div>
+        </section>
+
+        <section class="tarjeta seccion-contactos">
+            <div class="contactos-header">
+                <h2>Contactos Registrados</h2>
+                <button type="button" id="btn-refrescar" class="btn btn-secundario" onclick="cargarContactos()">Actualizar</button>
+            </div>
+
+            <!-- aquí pongo las tarjetas de contactos -->
+            <div id="contenedor-contactos" class="lista-contactos"></div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
